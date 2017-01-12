@@ -1,5 +1,19 @@
 # seguridMap
 
+User account
+
+Administrador
+user: admin
+pass: admin3044
+
+Investigador
+user: invest
+pass: invest
+
+Ciudadano
+user: ciudadano
+pass: ciudadano
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:

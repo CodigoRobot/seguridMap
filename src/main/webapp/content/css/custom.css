@@ -193,3 +193,9 @@ span.ol-loading-panel {
 
 .panel-heading .btn {
   margin-top: -3px; }
+
+.tipo-delito .content {
+  border-top: 2px solid #009688; }
+
+.tipo-delito h2 {
+  color: #4DB6AC; }

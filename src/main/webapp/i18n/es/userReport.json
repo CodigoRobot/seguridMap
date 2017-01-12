@@ -1,0 +1,60 @@
+{
+    "seguridMapApp": {
+        "userReport" : {
+            "home": {
+                "title": "Denuncia",
+                "createLabel": "Captura de denuncia",
+                "createOrEditLabel": "Capturar o editar denuncia",
+                "search": "Buscar denuncias"
+            },
+            "created": "Una nueva denuncia ha sido creada con el identificador {{ param }}",
+            "updated": "Una denuncia ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una denucnia ha sido eliminada con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar User Report {{ id }}?"
+            },
+            "detail": {
+                "title": "Denuncia"
+            },
+            "anonimo": "¿Deseas que tu denuncia sea reportada como anónima?",
+            "nombreDenunciante": "Nombre",
+            "apellidoPaternoDenunciante": "Apellido paterno",
+            "apellidoMaternoDenunciante": "Apellido materno",
+            "genero": "Género",
+            "correoDenunciante": "Correo electrónico",
+            "telefonoDenunciante": "Teléfono",
+            "domicilioDenunciante": "Domicilio",
+            "cpDenunciante": "Código postal",
+            "nombreDenunciado": "Nombre",
+            "apellidoPaternoDenunciado": "Apellido paterno",
+            "apellidoMaternoDenunciado": "Apellido materno",
+            "sobrenombreDenunciado": "Sobrenombre",
+            "generoDenunciado": "Género",
+            "descripcionDenunciado": "Características físicas y señas particulares  ",
+            "delito": "El delito que comete es",
+            "horarioDelito": "Horario en el que regularmente realiza los ilicitos",
+            "diaDelito": "Días de la semana en que comete las faltas o delitos",
+            "calleDelito": "Calle",
+            "numeroExtDelito": "Número Exterior",
+            "numIntDelito": "Número Interior",
+            "callePrincipalDelito": "Entre la calle",
+            "calleCruceDelito": "y la calle",
+            "descripcionDomicilioDelito": "Características del domicilio",
+            "narracionDelito": "Narración",
+            "policia": "¿Existen policías involucrados en la comisión de estos delitos o faltas?",
+            "fechaDelitoPolicia": "Fecha en que los vió",
+            "horaAproximadaDelitoPolicia": "Hora aproximada",
+            "municipioPolicia": "Municipio",
+            "corporacionPolicia": "Corporación",
+            "numeroUnidadPolicia": "Número(s) de la(s) Unidad(es)",
+            "colorUnidadaPolicia": "Color de la(s) unidad(es)",
+            "placasPolicia": "Placas",
+            "nombrePolicia": "Nombre(s) del (los) policía(s)",
+            "aliasPolicia": "Alias",
+            "domicilioPolicia": "Domicilio del (los) policía(s)",
+            "descripcionHechosPolicia": "Describa los hechos en que se involucraron ilícitamente",
+            "estadoReporte": "Estatus",
+            "autor": "Autor"
+        }
+    }
+}

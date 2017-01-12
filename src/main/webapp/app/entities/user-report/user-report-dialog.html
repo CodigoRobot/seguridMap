@@ -1,0 +1,293 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myUserReportLabel" data-translate="seguridMapApp.userReport.home.createOrEditLabel">Create or edit a User Report</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" ng-show="vm.userReport.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="vm.userReport.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="seguridMapApp.userReport.anonimo" for="field_anonimo">Anonimo</label>
+            <input type="checkbox" class="form-control" name="anonimo" id="field_anonimo"
+                   ng-model="vm.userReport.anonimo"
+            />
+        </div>
+        <uib-accordion is-open="1" ng-if="!vm.userReport.anonimo">
+            <div uib-accordion-group class="panel-default" heading="Datos del denunciante" is-open="0">
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.nombreDenunciante" for="field_nombreDenunciante">Nombre Denunciante</label>
+                    <input type="text" class="form-control" name="nombreDenunciante" id="field_nombreDenunciante"
+                           ng-model="vm.userReport.nombreDenunciante"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.apellidoPaternoDenunciante" for="field_apellidoPaternoDenunciante">Apellido Paterno Denunciante</label>
+                    <input type="text" class="form-control" name="apellidoPaternoDenunciante" id="field_apellidoPaternoDenunciante"
+                           ng-model="vm.userReport.apellidoPaternoDenunciante"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.apellidoMaternoDenunciante" for="field_apellidoMaternoDenunciante">Apellido Materno Denunciante</label>
+                    <input type="text" class="form-control" name="apellidoMaternoDenunciante" id="field_apellidoMaternoDenunciante"
+                           ng-model="vm.userReport.apellidoMaternoDenunciante"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.genero" for="field_genero">Genero</label>
+                    <select class="form-control" name="genero" ng-model="vm.userReport.genero" id="field_genero">
+                        <option value="Masculino" data-translate="seguridMapApp.Genero.Masculino">Masculino</option>
+                        <option value="Femenino" data-translate="seguridMapApp.Genero.Femenino">Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.correoDenunciante" for="field_correoDenunciante">Correo Denunciante</label>
+                    <input type="text" class="form-control" name="correoDenunciante" id="field_correoDenunciante"
+                           ng-model="vm.userReport.correoDenunciante"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.telefonoDenunciante" for="field_telefonoDenunciante">Telefono Denunciante</label>
+                    <input type="text" class="form-control" name="telefonoDenunciante" id="field_telefonoDenunciante"
+                           ng-model="vm.userReport.telefonoDenunciante"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.domicilioDenunciante" for="field_domicilioDenunciante">Domicilio Denunciante</label>
+                    <input type="text" class="form-control" name="domicilioDenunciante" id="field_domicilioDenunciante"
+                           ng-model="vm.userReport.domicilioDenunciante"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.cpDenunciante" for="field_cpDenunciante">Cp Denunciante</label>
+                    <input type="number" class="form-control" name="cpDenunciante" id="field_cpDenunciante"
+                           ng-model="vm.userReport.cpDenunciante"
+                    />
+                </div>
+            </div>
+        </uib-accordion>
+        <uib-accordion>
+            <div uib-accordion-group class="panel-default" heading="Datos de la persona a la que desea denunciar" is-open="0">
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.nombreDenunciado" for="field_nombreDenunciado">Nombre Denunciado</label>
+                    <input type="text" class="form-control" name="nombreDenunciado" id="field_nombreDenunciado"
+                           ng-model="vm.userReport.nombreDenunciado"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.apellidoPaternoDenunciado" for="field_apellidoPaternoDenunciado">Apellido Paterno Denunciado</label>
+                    <input type="text" class="form-control" name="apellidoPaternoDenunciado" id="field_apellidoPaternoDenunciado"
+                           ng-model="vm.userReport.apellidoPaternoDenunciado"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.apellidoMaternoDenunciado" for="field_apellidoMaternoDenunciado">Apellido Materno Denunciado</label>
+                    <input type="text" class="form-control" name="apellidoMaternoDenunciado" id="field_apellidoMaternoDenunciado"
+                           ng-model="vm.userReport.apellidoMaternoDenunciado"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.sobrenombreDenunciado" for="field_sobrenombreDenunciado">Sobrenombre Denunciado</label>
+                    <input type="text" class="form-control" name="sobrenombreDenunciado" id="field_sobrenombreDenunciado"
+                           ng-model="vm.userReport.sobrenombreDenunciado"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.generoDenunciado" for="field_generoDenunciado">Genero Denunciado</label>
+                    <select class="form-control" name="generoDenunciado" ng-model="vm.userReport.generoDenunciado" id="field_generoDenunciado">
+                        <option value="Masculino" data-translate="seguridMapApp.Genero.Masculino">Masculino</option>
+                        <option value="Femenino" data-translate="seguridMapApp.Genero.Femenino">Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.descripcionDenunciado" for="field_descripcionDenunciado">Descripcion Denunciado</label>
+                    <input type="text" class="form-control" name="descripcionDenunciado" id="field_descripcionDenunciado"
+                           ng-model="vm.userReport.descripcionDenunciado"
+                    />
+                </div>
+            </div>
+        </uib-accordion>
+        <uib-accordion>
+            <div uib-accordion-group class="panel-default" heading="Delito o la falta que comete la persona a la que denuncia" is-open="0">
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.delito" for="field_delito">Delito</label>
+                    <input type="text" class="form-control" name="delito" id="field_delito"
+                           ng-model="vm.userReport.delito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.horarioDelito" for="field_horarioDelito">Horario Delito</label>
+                    <input type="text" class="form-control" name="horarioDelito" id="field_horarioDelito"
+                           ng-model="vm.userReport.horarioDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.diaDelito" for="field_diaDelito">Dia Delito</label>
+                    <input type="text" class="form-control" name="diaDelito" id="field_diaDelito"
+                           ng-model="vm.userReport.diaDelito"
+                    />
+                </div>
+            </div>
+        </uib-accordion>
+        <uib-accordion>
+            <div uib-accordion-group class="panel-default" heading="¿En dónde comete los delitos o faltas la persona a la que está denunciando?" is-open="0">
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.calleDelito" for="field_calleDelito">Calle Delito</label>
+                    <input type="text" class="form-control" name="calleDelito" id="field_calleDelito"
+                           ng-model="vm.userReport.calleDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.numeroExtDelito" for="field_numeroExtDelito">Numero Ext Delito</label>
+                    <input type="text" class="form-control" name="numeroExtDelito" id="field_numeroExtDelito"
+                           ng-model="vm.userReport.numeroExtDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.numIntDelito" for="field_numIntDelito">Num Int Delito</label>
+                    <input type="text" class="form-control" name="numIntDelito" id="field_numIntDelito"
+                           ng-model="vm.userReport.numIntDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.callePrincipalDelito" for="field_callePrincipalDelito">Calle Principal Delito</label>
+                    <input type="text" class="form-control" name="callePrincipalDelito" id="field_callePrincipalDelito"
+                           ng-model="vm.userReport.callePrincipalDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.calleCruceDelito" for="field_calleCruceDelito">Calle Cruce Delito</label>
+                    <input type="text" class="form-control" name="calleCruceDelito" id="field_calleCruceDelito"
+                           ng-model="vm.userReport.calleCruceDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.descripcionDomicilioDelito" for="field_descripcionDomicilioDelito">Descripcion Domicilio Delito</label>
+                    <input type="text" class="form-control" name="descripcionDomicilioDelito" id="field_descripcionDomicilioDelito"
+                           ng-model="vm.userReport.descripcionDomicilioDelito"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.narracionDelito" for="field_narracionDelito">Narracion Delito</label>
+                    <input type="text" class="form-control" name="narracionDelito" id="field_narracionDelito"
+                           ng-model="vm.userReport.narracionDelito"
+                    />
+                </div>
+            </div>
+        </uib-accordion>
+        <div class="form-group">
+            <label class="control-label" data-translate="seguridMapApp.userReport.policia" for="field_policia">Policia</label>
+            <input type="checkbox" class="form-control" name="policia" id="field_policia"
+                   ng-model="vm.userReport.policia"
+            />
+        </div>
+        <uib-accordion>
+            <div uib-accordion-group class="panel-default" heading="Datos de policía" is-open="0" ng-if="vm.userReport.policia">
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.fechaDelitoPolicia" for="field_fechaDelitoPolicia">Fecha Delito Policia</label>
+                    <div class="input-group">
+                        <input id="field_fechaDelitoPolicia" type="text" class="form-control" name="fechaDelitoPolicia" datetime-picker="{{dateformat}}" ng-model="vm.userReport.fechaDelitoPolicia" is-open="vm.datePickerOpenStatus.fechaDelitoPolicia"
+                        />
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaDelitoPolicia')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.horaAproximadaDelitoPolicia" for="field_horaAproximadaDelitoPolicia">Hora Aproximada Delito Policia</label>
+                    <input type="text" class="form-control" name="horaAproximadaDelitoPolicia" id="field_horaAproximadaDelitoPolicia"
+                           ng-model="vm.userReport.horaAproximadaDelitoPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.municipioPolicia" for="field_municipioPolicia">Municipio Policia</label>
+                    <input type="text" class="form-control" name="municipioPolicia" id="field_municipioPolicia"
+                           ng-model="vm.userReport.municipioPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.corporacionPolicia" for="field_corporacionPolicia">Corporacion Policia</label>
+                    <input type="text" class="form-control" name="corporacionPolicia" id="field_corporacionPolicia"
+                           ng-model="vm.userReport.corporacionPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.numeroUnidadPolicia" for="field_numeroUnidadPolicia">Numero Unidad Policia</label>
+                    <input type="text" class="form-control" name="numeroUnidadPolicia" id="field_numeroUnidadPolicia"
+                           ng-model="vm.userReport.numeroUnidadPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.colorUnidadaPolicia" for="field_colorUnidadaPolicia">Color Unidada Policia</label>
+                    <input type="text" class="form-control" name="colorUnidadaPolicia" id="field_colorUnidadaPolicia"
+                           ng-model="vm.userReport.colorUnidadaPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.placasPolicia" for="field_placasPolicia">Placas Policia</label>
+                    <input type="text" class="form-control" name="placasPolicia" id="field_placasPolicia"
+                           ng-model="vm.userReport.placasPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.nombrePolicia" for="field_nombrePolicia">Nombre Policia</label>
+                    <input type="text" class="form-control" name="nombrePolicia" id="field_nombrePolicia"
+                           ng-model="vm.userReport.nombrePolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.aliasPolicia" for="field_aliasPolicia">Alias Policia</label>
+                    <input type="text" class="form-control" name="aliasPolicia" id="field_aliasPolicia"
+                           ng-model="vm.userReport.aliasPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.domicilioPolicia" for="field_domicilioPolicia">Domicilio Policia</label>
+                    <input type="text" class="form-control" name="domicilioPolicia" id="field_domicilioPolicia"
+                           ng-model="vm.userReport.domicilioPolicia"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" data-translate="seguridMapApp.userReport.descripcionHechosPolicia" for="field_descripcionHechosPolicia">Descripcion Hechos Policia</label>
+                    <input type="text" class="form-control" name="descripcionHechosPolicia" id="field_descripcionHechosPolicia"
+                           ng-model="vm.userReport.descripcionHechosPolicia"
+                    />
+                </div>
+
+            </div>
+        </uib-accordion>
+        <div class="form-group" ng-show="false">
+            <label class="control-label" data-translate="seguridMapApp.userReport.estadoReporte" for="field_estadoReporte">Estado Reporte</label>
+            <select  class="form-control" name="estadoReporte" ng-model="vm.userReport.estadoReporte" id="field_estadoReporte" ng-init="vm.userReport.estadoReporte=seguridMapApp.EstadoReporte.EsperaAtencion">
+                <option value="EsperaAtencion" data-translate="seguridMapApp.EstadoReporte.EsperaAtencion">EsperaAtencion</option>
+                <option value="Proceso" data-translate="seguridMapApp.EstadoReporte.Proceso">Proceso</option>
+                <option value="Resuelto" data-translate="seguridMapApp.EstadoReporte.Resuelto">Resuelto</option>
+            </select>
+        </div>
+
+        <div class="form-group" ng-show="false">
+            <label data-translate="seguridMapApp.userReport.autor" for="field_autor">Autor</label>
+            <select class="form-control" id="field_autor" name="autor" ng-model="vm.userReport.autor" ng-options="user as user.login for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+
+        <div class="form-group hide">
+            <label class="control-label" for="field_position">WKT Geolocation</label>
+            <input type="text" class="form-control" name="position" id="field_position" ng-model="vm.userReport.position" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

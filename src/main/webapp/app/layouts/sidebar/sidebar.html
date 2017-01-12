@@ -1,0 +1,55 @@
+<div class="side-menu" ng-show="vm.isAuthenticated()">
+    <nav class="navbar-second navbar-default" role="navigation">
+        <!-- Main Menu -->
+        <div class="side-menu-container">
+
+            <div class="profile text-center">
+                <br>
+                <div class="row">
+                    <img class="img-circle col-xs-12 col-sm-offset-2 col-sm-8" src="http://wedesignthemes.com/html/role/images/post-images/profile-img4.jpg" />
+                </div>
+                <br>
+                <div class="hidden-xs row">
+                    <h3 ng-bind="vm.user.login"></h3>
+                    <h4><span ng-bind="vm.user.firstName"></span> <span ng-bind="vm.user.lastName"></span></h4>
+                    <div>
+                        <button class="btn btn-primary" ng-click="vm.logout()">Cerrar sesión</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active">
+                    <a ui-sref="home">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span data-translate="global.menu.home">Home</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="user-report">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span data-translate="global.menu.entities.userReport">Report</span>
+                    </a>
+                </li>
+
+                <li ng-repeat='panel in vm.panels'>
+                    <a ng-click="vm.go(panel)">
+                        <span class="glyphicon glyphicon-th"></span>
+                        <span>{{panel.nombre}}</span>
+                    </a>
+                </li>
+
+                <li ng-show="vm.swaggerEnabled" ui-sref-active="active">
+                    <a ui-sref="docs" ng-click="vm.collapseNavbar()">
+                        <span class="glyphicon glyphicon-signal"></span>
+                        <span data-translate="global.menu.admin.apidocs">API</span>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</div>

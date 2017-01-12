@@ -1,0 +1,162 @@
+<div ng-cloak>
+    <h2 class="title">Inicio</h2>
+
+    <!--<leaflet id="main1" class="panel-map"></leaflet> -->
+
+   <openlayers id="main1" class="panel-map" height="600px" width="100%"></openlayers>
+    <div class="row box">
+        <div class="pull-right">
+        </div>
+    </div>
+    <div class="row box">
+        <form class="row">
+
+            <div class="form-group col-sm-2">
+                <label class="control-label">Región</label>
+                <select class="form-control" id="field_panel" ng-model="vm.filters.region" ng-options="feature as feature.properties.REGION for feature in vm.catalogs.regiones.features track by feature.properties.OID">
+                    <option value="">Seleccionar región</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-2">
+                <label class="control-label">Municipio</label>
+                <select ng-disabled='!vm.filters.region || !vm.catalogs.municipios.features' class="form-control" id="field_panel" ng-model="vm.filters.municipios" ng-options="feature as feature.properties.nom_mun for feature in vm.catalogs.municipios.features track by feature.properties.cve_mun">
+                    <option value="">Seleccionar municipio</option>
+                </select>
+            </div>
+            <div  class="form-group col-sm-2" ng-if="vm.filters.region.properties.OID == 3">
+                <label class="control-label">Código postal</label>
+                <input ng-disabled='!vm.filters.municipios' type="text" ng-model="vm.filters.cp" class="form-control">
+            </div>
+            <div  class="form-group col-sm-2" ng-if="vm.filters.region.properties.OID == 3">
+                <label class="control-label">Colonia</label>
+                    <select ng-disabled='!vm.filters.municipios || !vm.catalogs.colonias.features.length > 0' class="form-control" id="field_panel" ng-model="vm.filters.colonia" ng-options="feature as feature.properties.COLONIA for feature in vm.catalogs.colonias.features track by feature.id">
+                    <option value="">Seleccionar colonia</option>
+                </select>
+            </div>
+            <div  class="form-group col-sm-2" ng-if="vm.filters.region.properties.OID == 3">
+                <label class="control-label">AGEB</label>
+                <select ng-disabled='!vm.filters.municipios || !vm.catalogs.colonias.features.length > 0' class="form-control" id="field_panel" ng-model="vm.filters.colonia" ng-options="feature as feature.properties.COLONIA for feature in vm.catalogs.colonias.features track by feature.id">
+                    <option value="">Seleccionar AGEB</option>
+                </select>
+            </div>
+            <div  class="form-group col-sm-2">
+                <label class="control-label">Tipo delito</label>
+                <select class="form-control" id="field_panel" ng-model="vm.filters.colonia" ng-options="feature as feature.properties.COLONIA for feature in vm.catalogs.colonias.features track by feature.id">
+                    <option value="">Robo a negocio</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="row">
+        <!-- Mun statistics -->
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Municipios
+                    <button class="pull-right btn btn-sm btn-default">Descargar</button>
+                    <select class="pull-right"><option>KML</option></select>
+                </div>
+                <div class="panel-body">
+                    <div class="content-area">
+                        <div class="table-responsive">
+                            <table class="jh-table table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th><span>CVE_MPIO</span></th>
+                                    <th><span>NOM_MUN</span></th>
+                                    <th><span>POB_TOT</span></th>
+                                    <th><span>ANALF</span></th>
+                                    <th><span>SPRIM</span></th>
+                                    <th><span>OVSDE</span></th>
+                                    <th><span>OVSEE</span></th>
+                                    <th><span>OVSAE</span></th>
+                                    <th><span>VHAC</span></th>
+                                    <th><span>OVPT</span></th>
+                                    <th><span>PL_MEN5000</span></th>
+                                    <th><span>PO2SM</span></th>
+                                    <th><span>OVSD</span></th>
+                                    <th><span>OVSDSE</span></th>
+                                    <th><span>IMM</span></th>
+                                    <th><span>GMM</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  <tr ng-repeat="im_mun in vm.blocks.im_mun.result">
+                                    <td>{{im_mun.im_municipio_2010.CVE_MPIO.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.NOM_MUN_1.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.POB_TOT.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.ANALF.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.SPRIM.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.OVSDE.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.OVSEE.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.OVSAE.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.VHAC.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.OVPT.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.PL_MEN5000.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.PO2SM.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.OVSD.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.OVSDSE.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.IMM.__text}}</td>
+                                    <td>{{im_mun.im_municipio_2010.GMM.__text}}</td>
+
+
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paginator text-center">
+                        <paging
+                            ul-class="pagination-sm pagination"
+                            page="vm.blocks.im_mun.page"
+                            page-size="vm.blocks.im_mun.itemsPerPage"
+                            total="vm.blocks.im_mun.totalItems"
+                            show-prev-next="true"
+                            show-first-last="true">
+                        </paging>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pob por municipio -->
+        <div class="col-sm-6" ng-if="!vm.filters.municipios">
+            <div class="panel panel-default">
+                <div class="panel-heading">Población por municipio
+                    <button class="pull-right btn btn-sm btn-default">Descargar</button>
+                    <select class="pull-right"><option>KML</option></select>
+                </div>
+                <div class="panel-body" style="overflow: hidden">
+                    <highchart config="vm.blocks.im_mun_graph.pob_tot"  width="100%"></highchart>
+                </div>
+            </div>
+        </div>
+        <!-- Analfabetismo por municipio -->
+        <div class="col-sm-6" ng-if="!vm.filters.municipios">
+            <div class="panel panel-default">
+                <div class="panel-heading">Analfabetismo por municipio
+                    <button class="pull-right btn btn-sm btn-default">Descargar</button>
+                    <select class="pull-right"><option>KML</option></select>
+                </div>
+                <div class="panel-body" style="overflow: hidden">
+                    <highchart config="vm.blocks.im_mun_graph.analfb"  width="100%"></highchart>
+                </div>
+            </div>
+        </div>
+        <!-- IMM -->
+        <div class="col-sm-12" ng-if="!vm.filters.municipios">
+            <div class="panel panel-default">
+                <div class="panel-heading">Índice de marginación por municipio
+                    <button class="pull-right btn btn-sm btn-default">Descargar</button>
+                    <select class="pull-right"><option>KML</option></select>
+                </div>
+                <div class="panel-body" style="overflow: hidden">
+                    <highchart config="vm.blocks.im_mun_graph.imm"  width="100%"></highchart>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

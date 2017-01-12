@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "configuracion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orden",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170107030611",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "panel",
+    "pagination": "pagination"
+}

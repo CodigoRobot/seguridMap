@@ -1,0 +1,60 @@
+{
+    "seguridMapApp": {
+        "userReport" : {
+            "home": {
+                "title": "User Reports",
+                "createLabel": "Create a new User Report",
+                "createOrEditLabel": "Create or edit a User Report",
+                "search": "Search for User Report"
+            },
+            "created": "A new User Report is created with identifier {{ param }}",
+            "updated": "A User Report is updated with identifier {{ param }}",
+            "deleted": "A User Report is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Report {{ id }}?"
+            },
+            "detail": {
+                "title": "User Report"
+            },
+            "anonimo": "Anonimo",
+            "apellidoPaternoDenunciante": "Apellido Paterno Denunciante",
+            "apellidoMaternoDenunciante": "Apellido Materno Denunciante",
+            "genero": "Genero",
+            "correoDenunciante": "Correo Denunciante",
+            "telefonoDenunciante": "Telefono Denunciante",
+            "domicilioDenunciante": "Domicilio Denunciante",
+            "cpDenunciante": "Cp Denunciante",
+            "nombreDenunciado": "Nombre Denunciado",
+            "apellidoPaternoDenunciado": "Apellido Paterno Denunciado",
+            "apellidoMaternoDenunciado": "Apellido Materno Denunciado",
+            "sobrenombreDenunciado": "Sobrenombre Denunciado",
+            "generoDenunciado": "Genero Denunciado",
+            "descripcionDenunciado": "Descripcion Denunciado",
+            "delito": "Delito",
+            "horarioDelito": "Horario Delito",
+            "diaDelito": "Dia Delito",
+            "calleDelito": "Calle Delito",
+            "numeroExtDelito": "Numero Ext Delito",
+            "numIntDelito": "Num Int Delito",
+            "callePrincipalDelito": "Calle Principal Delito",
+            "calleCruceDelito": "Calle Cruce Delito",
+            "descripcionDomicilioDelito": "Descripcion Domicilio Delito",
+            "narracionDelito": "Narracion Delito",
+            "policia": "Policia",
+            "fechaDelitoPolicia": "Fecha Delito Policia",
+            "horaAproximadaDelitoPolicia": "Hora Aproximada Delito Policia",
+            "municipioPolicia": "Municipio Policia",
+            "corporacionPolicia": "Corporacion Policia",
+            "numeroUnidadPolicia": "Numero Unidad Policia",
+            "colorUnidadaPolicia": "Color Unidada Policia",
+            "placasPolicia": "Placas Policia",
+            "nombrePolicia": "Nombre Policia",
+            "aliasPolicia": "Alias Policia",
+            "domicilioPolicia": "Domicilio Policia",
+            "descripcionHechosPolicia": "Descripcion Hechos Policia",
+            "estadoReporte": "Estado Reporte",
+            "nombreDenunciante": "Nombre Denunciante",
+            "autor": "Autor"
+        }
+    }
+}

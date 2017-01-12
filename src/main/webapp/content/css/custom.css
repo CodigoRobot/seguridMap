@@ -1,0 +1,195 @@
+/* ==========================================================================
+General Map
+========================================================================== */
+body {
+  margin-top: 60px; }
+
+.map,
+.angular-leaflet-map {
+  width: 100%;
+  height: 380px; }
+  .map.mainMap,
+  .angular-leaflet-map.mainMap {
+    height: 700px; }
+
+.chart {
+  width: 200px !important;
+  height: auto !important;
+  margin-bottom: 20px; }
+
+.alert.alert-danger, .alert.alert-warning {
+  background-color: #E57373 !important;
+  color: white !important; }
+  .alert.alert-danger a, .alert.alert-warning a {
+    color: white; }
+
+.alert.alert-success {
+  background-color: #81C784 !important; }
+
+.navbar.navbar-default {
+  margin-bottom: 0px; }
+
+.main-content {
+  background-color: white;
+  border-bottom: 1px solid #e7e7e7; }
+
+.panel-map {
+  width: 100%;
+  height: 600px;
+  margin-top: 23px;
+  border-top: 3px solid #B2DFDB; }
+
+.box {
+  margin-left: 10px; }
+
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+  overflow-x: hidden; }
+
+/* Toggle Styles */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled {
+  padding-left: 250px; }
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 300px; }
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute; }
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -300px; }
+
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px; }
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999; }
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2); }
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none; }
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px; }
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999; }
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none; }
+
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 300px; }
+  #wrapper.toggled {
+    padding-left: 0; }
+  #sidebar-wrapper {
+    width: 300px; }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0; }
+  #page-content-wrapper {
+    position: relative; }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0; } }
+
+.not-logged {
+  padding-left: 0px !important; }
+  .not-logged .main-content {
+    padding-left: 0px !important;
+    padding-right: 0px !important; }
+  .not-logged .title {
+    display: none !important; }
+  .not-logged .panel-map {
+    margin-top: 0px !important; }
+
+span.ol-loading-panel {
+  width: 100% !important;
+  height: 600px !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  left: 0px !important;
+  top: 0px !important; }
+
+.draw-circle {
+  top: 80px;
+  left: .5em; }
+
+.draw-polygon {
+  top: 110px;
+  left: .5em; }
+
+.login-form .well {
+  box-shadow: none !important;
+  border: 1px solid #f5f5f5 !important;
+  border-top: 2px solid #009688 !important; }
+
+.welcome .container {
+  margin-top: 20px;
+  margin-bottom: 60px; }
+
+.welcome .content {
+  margin-top: 60px; }
+
+.welcome .well {
+  box-shadow: none !important;
+  border: 1px solid #f5f5f5 !important;
+  border-top: 2px solid #009688 !important; }
+
+.draw-circle button {
+  background-image: url(../images/circle.png);
+  background-size: 22px;
+  color: transparent; }
+
+.draw-polygon button {
+  background-image: url(../images/pol.png);
+  background-size: 22px;
+  color: transparent; }
+
+.panel-heading .btn {
+  margin-top: -3px; }

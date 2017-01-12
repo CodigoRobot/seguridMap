@@ -1,0 +1,10 @@
+{
+    "seguridMapApp": {
+        "EstadoReporte" : {
+            "null": "",
+            "EsperaAtencion": "Espera de atención",
+            "Proceso": "En proceso",
+            "Resuelto": "Resuelto"
+        }
+    }
+}

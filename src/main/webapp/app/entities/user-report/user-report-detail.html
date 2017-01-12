@@ -1,0 +1,175 @@
+
+<div>
+    <h2><span data-translate="seguridMapApp.userReport.detail.title">User Report</span> {{vm.userReport.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="seguridMapApp.userReport.anonimo">Anonimo</span></dt>
+        <dd>
+            <span>{{vm.userReport.anonimo}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.apellidoPaternoDenunciante">Apellido Paterno Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.apellidoPaternoDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.apellidoMaternoDenunciante">Apellido Materno Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.apellidoMaternoDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.genero">Genero</span></dt>
+        <dd>
+            <span data-translate="{{'seguridMapApp.Genero.' + vm.userReport.genero}}">{{vm.userReport.genero}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.correoDenunciante">Correo Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.correoDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.telefonoDenunciante">Telefono Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.telefonoDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.domicilioDenunciante">Domicilio Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.domicilioDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.cpDenunciante">Cp Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.cpDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.nombreDenunciado">Nombre Denunciado</span></dt>
+        <dd>
+            <span>{{vm.userReport.nombreDenunciado}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.apellidoPaternoDenunciado">Apellido Paterno Denunciado</span></dt>
+        <dd>
+            <span>{{vm.userReport.apellidoPaternoDenunciado}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.apellidoMaternoDenunciado">Apellido Materno Denunciado</span></dt>
+        <dd>
+            <span>{{vm.userReport.apellidoMaternoDenunciado}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.sobrenombreDenunciado">Sobrenombre Denunciado</span></dt>
+        <dd>
+            <span>{{vm.userReport.sobrenombreDenunciado}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.generoDenunciado">Genero Denunciado</span></dt>
+        <dd>
+            <span data-translate="{{'seguridMapApp.Genero.' + vm.userReport.generoDenunciado}}">{{vm.userReport.generoDenunciado}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.descripcionDenunciado">Descripcion Denunciado</span></dt>
+        <dd>
+            <span>{{vm.userReport.descripcionDenunciado}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.delito">Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.delito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.horarioDelito">Horario Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.horarioDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.diaDelito">Dia Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.diaDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.calleDelito">Calle Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.calleDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.numeroExtDelito">Numero Ext Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.numeroExtDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.numIntDelito">Num Int Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.numIntDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.callePrincipalDelito">Calle Principal Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.callePrincipalDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.calleCruceDelito">Calle Cruce Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.calleCruceDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.descripcionDomicilioDelito">Descripcion Domicilio Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.descripcionDomicilioDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.narracionDelito">Narracion Delito</span></dt>
+        <dd>
+            <span>{{vm.userReport.narracionDelito}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.policia">Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.policia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.fechaDelitoPolicia">Fecha Delito Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.fechaDelitoPolicia | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.horaAproximadaDelitoPolicia">Hora Aproximada Delito Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.horaAproximadaDelitoPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.municipioPolicia">Municipio Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.municipioPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.corporacionPolicia">Corporacion Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.corporacionPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.numeroUnidadPolicia">Numero Unidad Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.numeroUnidadPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.colorUnidadaPolicia">Color Unidada Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.colorUnidadaPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.placasPolicia">Placas Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.placasPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.nombrePolicia">Nombre Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.nombrePolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.aliasPolicia">Alias Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.aliasPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.domicilioPolicia">Domicilio Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.domicilioPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.descripcionHechosPolicia">Descripcion Hechos Policia</span></dt>
+        <dd>
+            <span>{{vm.userReport.descripcionHechosPolicia}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.estadoReporte">Estado Reporte</span></dt>
+        <dd>
+            <span data-translate="{{'seguridMapApp.EstadoReporte.' + vm.userReport.estadoReporte}}">{{vm.userReport.estadoReporte}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.nombreDenunciante">Nombre Denunciante</span></dt>
+        <dd>
+            <span>{{vm.userReport.nombreDenunciante}}</span>
+        </dd>
+        <dt><span data-translate="seguridMapApp.userReport.autor">Autor</span></dt>
+        <dd>
+            {{vm.userReport.autor.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="user-report-detail.edit({id:vm.userReport.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

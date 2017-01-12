@@ -1,0 +1,174 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "autor",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "anonimo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "apellidoPaternoDenunciante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellidoMaternoDenunciante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "genero",
+            "fieldType": "Genero",
+            "fieldValues": "Masculino,Femenino"
+        },
+        {
+            "fieldName": "correoDenunciante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefonoDenunciante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "domicilioDenunciante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cpDenunciante",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombreDenunciado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellidoPaternoDenunciado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellidoMaternoDenunciado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sobrenombreDenunciado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "generoDenunciado",
+            "fieldType": "Genero",
+            "fieldValues": "Masculino,Femenino"
+        },
+        {
+            "fieldName": "descripcionDenunciado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "delito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "horarioDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diaDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "calleDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroExtDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numIntDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "callePrincipalDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "calleCruceDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcionDomicilioDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "narracionDelito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "policia",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fechaDelitoPolicia",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "horaAproximadaDelitoPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "municipioPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "corporacionPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroUnidadPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "colorUnidadaPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "placasPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombrePolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aliasPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "domicilioPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcionHechosPolicia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "estadoReporte",
+            "fieldType": "EstadoReporte",
+            "fieldValues": "EsperaAtencion,Proceso,Resuelto"
+        },
+        {
+            "fieldName": "nombreDenunciante",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170106200005",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "user_report",
+    "pagination": "pagination"
+}

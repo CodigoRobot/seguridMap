@@ -1,0 +1,9 @@
+{
+    "seguridMapApp": {
+        "Genero" : {
+            "null": "",
+            "Masculino": "Masculino",
+            "Femenino": "Femenino"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "seguridMapApp": {
+        "GeneroDenunciado" : {
+            "null": "",
+            "Masculino": "Masculino",
+            "Femenino": "Femenino"
+        }
+    }
+}

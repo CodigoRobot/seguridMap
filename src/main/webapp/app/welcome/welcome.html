@@ -1,0 +1,45 @@
+<div class="welcome">
+    <div class="container">
+        <h1>Bienvenido a Jalisco Seguro</h1>
+        <div class="content">
+            <div class="col-sm-3 well info">
+                <h3>Ciudadano</h3><br>
+                Si usted es un ciudadano preocupado por el entorno en donde vive y
+                desea conocer más acerca de los indicadores que impactan a su colonia
+                o área de residencia puede acceder al panel de monitoreo ciudadano,
+                descargar la app móvil de consulta y levantamiento de reportes o
+                puede registrase para obtener más información de análisis.
+                </br>
+                <ul style="margin-top: 20px;">
+                    <li><a ng-click="vm.goDashboard()">Ir al panel de análisis ciudadano</a></li>
+                    <li><a target="_self" ng-href="https://coderobot.com.mx/sg.apk">Descargar la app móvil (Android)</a></li>
+                    <li><a target="_self" ng-href="https://coderobot.com.mx/sg.ipa">Descargar la app móvil (IOS)</a></li>
+
+                    <li><a ng-click="vm.register()" ng-disabled="1">Regístrese</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-sm-offset-1 well info">
+                <h3>Investigador</h3><br>
+                Si usted es un investigador y requiere de información actualizada y
+                veraz además de generación de reportes y cruce de información georeferenciada,
+                regístrese para acceder a estas y otras funcionalidades,
+                </br>
+                <ul style="margin-top: 20px;">
+                    <li><a ng-click="vm.goDashboard()">Ir al panel de análisis ciudadano</a></li>
+                    <li><a target="_self" ng-href="https://coderobot.com.mx/sg.apk">Descargar la app móvil</a></li>
+                    <li><a ng-click="vm.register()" ng-disabled="1">Regístrese</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1 well info">
+                <h3>Administrativo</h3><br>
+                Acceda a la plataforma administrativa de Jalisco Seguro para dar seguimiento a
+                reportes, capturar información y monitorear el sistema.
+                </br>
+                <ul style="margin-top: 20px;">
+                    <li><a ng-click="vm.login()" ng-disabled="1">Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
